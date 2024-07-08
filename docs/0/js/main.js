@@ -14,6 +14,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     van.add(footer,  new Footer('ytyaru', '../').make())
 
     // 本題
+//    let res = null
     Array.prototype.__addAssign = function(v){
         return [...this, ...v]
     }
@@ -21,9 +22,14 @@ window.addEventListener('DOMContentLoaded', (event) => {
         let a = [1,2]
         a += [3,4]
         console.log(a)
+//        res = a
+        // Error: Line 6: Unexpected token ILLEGAL
 //        van.add(main, `let a = [1,2]`, van.tags.br(), `a += [3,4]`, van.tags.br(), `${a}`)
 //        document.body.append(`${a}`)
     })();
+    // null
+//    van.add(main, `let a = [1,2]`, van.tags.br(), `a += [3,4]`, van.tags.br(), `${res}`)
+//    document.body.append(`${res}`)
 });
 window.addEventListener('beforeunload', (event) => {
     console.log('beforeunload!!');
